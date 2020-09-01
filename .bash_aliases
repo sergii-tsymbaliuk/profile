@@ -1,12 +1,37 @@
+# ~/.profile: executed by the command interpreter for login shells.
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+
 alias alias-save='alias > ~/.aliases'
 alias clr='for i in {1..20}; do echo; done'
 alias gh='history | grep'
-alias gitamend='git add . && git commit --amend --no-edit'
+alias gitamend='git commit -a --amend '
 alias gitlog='git log --graph --decorate --oneline -20'
-alias gitrebasemaster='git fetch --all && git checkout master && git rebase upstream/master && git push origin master && git fetch --all'
 alias gs='git status'
 alias hst='export HISTTIMEFORMAT='\'''\'' ; history ; export HISTTIMEFORMAT='\''%F %T '\'''
-alias ll='ls -alhGH'
+# alias ll='ls -alhGH'
 alias pip='pip3'
 
 

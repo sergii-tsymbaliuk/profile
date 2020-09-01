@@ -1,2 +1,3 @@
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+if [ -f "$HOME/.bash_include" ] ; then
+    . "$HOME/.bash_include"
+fi
