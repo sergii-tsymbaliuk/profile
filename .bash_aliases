@@ -9,6 +9,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+else
+    alias ls='ls -G'
+    export GREP_OPTIONS='--color=always'
+    export GREP_COLOR='1;35;40'
 fi
 
 # colored GCC warnings and errors
