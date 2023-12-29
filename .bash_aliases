@@ -17,6 +17,7 @@ fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+alias ls='ls --color'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -38,4 +39,7 @@ alias hst='export HISTTIMEFORMAT='\'''\'' ; history ; export HISTTIMEFORMAT='\''
 # alias ll='ls -alhGH'
 alias pip='pip3'
 
+alias cru='cr --parent mainline --destination-branch mainline --update-review '
+alias crn='cr --parent mainline --destination-branch mainline --new-review '
 
+alias runoncd='ssh dev-dsk-stsymb-1d-052842a1.us-east-1.amazon.com '
